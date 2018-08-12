@@ -13,6 +13,7 @@ local.properties
 
 transaction-logs
 SpringBoot.xml
+setting-test1.xml
 
 target/
 

@@ -1,9 +1,11 @@
 ---
 applications:
 - name: cf-kie-server
-  memory: 1G
+  memory: 1.4G
   health-check-type: process
   random-route: true
   path: target/cf-kie-server-1.0-SNAPSHOT.jar
   env:
    JBP_CONFIG_JMX: '{enabled: true}'
+  include_files:
+  - deploy.sh

@@ -32,7 +32,7 @@ public class DefaultWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication().withUser("admin").password("asdfasdf").roles("kie-server","ACTUATOR");
-        auth.inMemoryAuthentication().withUser("kieserver").password("asdfasdf").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("kieserver").password("kieserver1!").roles("kie-server");
         auth.inMemoryAuthentication().withUser("jack").password("asdfasdf").roles("kie-server", "HR");
         auth.inMemoryAuthentication().withUser("jill").password("asdfasdf").roles("kie-server", "PM");
 
