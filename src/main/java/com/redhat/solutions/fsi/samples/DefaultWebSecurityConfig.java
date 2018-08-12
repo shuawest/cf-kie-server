@@ -26,6 +26,8 @@ public class DefaultWebSecurityConfig extends WebSecurityConfigurerAdapter {
             .and()
         .httpBasic();
 
+		// TODO: determine proper error response on invalid user, because business-central isn't failing with typical response
+
         logger.info("Initialized kieServerSecurity");
     }
 
@@ -33,6 +35,7 @@ public class DefaultWebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication().withUser("admin").password("asdfasdf").roles("kie-server","ACTUATOR");
         auth.inMemoryAuthentication().withUser("kieserver").password("kieserver1!").roles("kie-server");
+        auth.inMemoryAuthentication().withUser("pamadmin").password("asdfasdf").roles("kie-server", "HR", "PM");
         auth.inMemoryAuthentication().withUser("jack").password("asdfasdf").roles("kie-server", "HR");
         auth.inMemoryAuthentication().withUser("jill").password("asdfasdf").roles("kie-server", "PM");
 

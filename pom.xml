@@ -62,6 +62,13 @@
 			<version>${kie.version}</version>
 		</dependency>
 
+       <!-- Logs web requests and responses -->
+		<dependency>
+			<groupId>org.zalando</groupId>
+			<artifactId>logbook-spring-boot-starter</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+
 		<dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-spring-service-connector</artifactId>

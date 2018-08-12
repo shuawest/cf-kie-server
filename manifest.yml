@@ -7,5 +7,4 @@ applications:
   path: target/cf-kie-server-1.0-SNAPSHOT.jar
   env:
    JBP_CONFIG_JMX: '{enabled: true}'
-  include_files:
-  - deploy.sh
+   LANG: 'en_US.UTF-8'

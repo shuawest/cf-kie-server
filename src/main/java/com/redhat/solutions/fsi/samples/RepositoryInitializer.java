@@ -1,7 +1,5 @@
 package com.redhat.solutions.fsi.samples;
 
-import org.appformer.maven.integration.MavenRepository;
-import org.kie.server.services.impl.KieServerImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -56,9 +54,6 @@ public class RepositoryInitializer {
                     SETTINGS_OUTPUT_FILE,
                     remoteRepoUrl, repoteRepoUser, repoteRepoPass);
         }
-
-        //MavenRepository
-        //KieServerImpl
     }
 
     public void initializeDirectories() {
