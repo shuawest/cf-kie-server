@@ -53,11 +53,11 @@ As an alternative, the following is currently being investigated. Narayana allow
 
 ## CF & KIE Knowledge Base
 
-###### Viewing App Properties
+#### Viewing App Properties
 
 View the full set of process properties from the system, app, and cloud level using [Actuator](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html). Go to the `http://cf-kie-server-<yourapp>.local.pcfdev.io/env` address, and log in with username `admin`, and password `asdfasdf`. As you have changed the security settings this may vary, the user must have the `ACTUATOR` role to view the environment variables.
 
-###### Connecting to the CF MySQL Instance
+#### Connecting to the CF MySQL Instance
 
 For a local pcfdev development environment you can run mysql behind applications. Here is how to connect to the local mysql database to query/manipulate from your local machine. The following should also work for remote environments as well:
 
@@ -70,7 +70,7 @@ More:
 * [Using MySql for PCF](https://docs.pivotal.io/p-mysql/2-1/use.html)
 * [cf-mysql-plugin](https://github.com/andreasf/cf-mysql-plugin)
 
-###### Creating a Data Source in Business-Central
+#### Creating a Data Source in Business-Central
 
 1. Go to Menu > Design > Pages
 1. Select the setting tab (icon with three horizontal lines)
@@ -83,7 +83,7 @@ More:
 1. Click 'Test Connection' to verify
 1. Save/Update the connection
 
-###### Monitoring JVM in Cloud Foundry
+#### Monitoring JVM in Cloud Foundry
 
 1. Start process with `./deploy-cf.sh` (The `manifest.yml > JBP_CONFIG_JMX: '{enabled: true}'` setting, plus the `cf ssh -N -T -L 5000:localhost:5000 cf-kie-server` command in the deploy script enables jmx connections)
 1. Use `jconsole` and connect to `localhost:5000`
@@ -97,16 +97,16 @@ More:
 
 ## Additional Links
 
-### Red Hat Process Automation
+#### Red Hat Process Automation
 * [KIE Server jBPM Spring Boot Starter](https://github.com/kiegroup/droolsjbpm-integration/tree/master/kie-spring-boot/kie-spring-boot-starters/kie-server-spring-boot-starter-jbpm)
 * [Spring Boot starters for jBPM and KIE Server](http://mswiderski.blogspot.com/2018/01/spring-boot-starters-for-jbpm-and-kie.html)
 * [Quick Install Demo](https://github.com/jbossdemocentral/rhpam7-install-demo)
 
-### Cloud Foundry
+#### Cloud Foundry
 * [PCF Dev Local Environment Setup](https://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry-dev/introduction)
 * [PCF Performance Tuning](http://engineering.pivotal.io/post/profiling_cpu_on_pcf/)
 
-### Property Reference
+#### Property Reference
 * [KIE Server Property Names and Constants](https://github.com/kiegroup/droolsjbpm-integration/blob/5788f5fc0a151dc1b2c005172c1dd3007de12994/kie-server-parent/kie-server-api/src/main/java/org/kie/server/api/KieServerConstants.java)
 * [SpringBoot Common Application Properties Reference](https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/html/common-application-properties.html)
 * [Cloud Foundry Environment Variables Reference](https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html)
