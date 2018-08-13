@@ -18,7 +18,7 @@ public class RepositoryInitializerTests {
 
 		repositoryInitializer.writeSettingsFile(
 				"/settings-template.xml",
-				"settings-test1.xml",
+				"target/settings-test1.xml",
 				"http://sample.repo.address/maven2/", "myuser", "mypass");
 
 	}
