@@ -95,6 +95,19 @@ More:
 * [Download JVisualVM](https://visualvm.github.io/download.html)
 * Java Home in OSX is `/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/`
 
+#### Remote debugging JVM in Cloud Foundry from IDEA Intellij
+
+1. Start process with `./deploy-cf.sh` (The `manifest.yml > JBP_CONFIG_DEBUG: '{enabled: true}'` setting, plus the `cf ssh -N -T -L 8000:localhost:8000 cf-kie-server` command in the deploy script enables remote debug connections)
+1. Open cf-kie-server in IDEA
+1. In the Intellij menu, select 'Run > Edit Configuration'
+1. Click '+' and select 'Remote'
+1. Set Name to `cf-kie-server-remote-debug`, set host to `localhost`, and port to `8000`
+1. Save and close the configuration
+1. In the Intellij menu, select 'Run > Debug cf-kie-server-remote-debug'
+
+More:
+* [How to Remotely Debug Java Applications on Cloud Foundry](https://community.pivotal.io/s/article/How-to-Remotely-Debug-Java-Applications-on-Cloud-Foundry)
+
 ## Additional Links
 
 #### Red Hat Process Automation
@@ -103,10 +116,16 @@ More:
 * [Quick Install Demo](https://github.com/jbossdemocentral/rhpam7-install-demo)
 
 #### Cloud Foundry
-* [PCF Dev Local Environment Setup](https://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry-dev/introduction)
+* [PCFDev Local Environment Setup](https://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry-dev/introduction)
 * [PCF Performance Tuning](http://engineering.pivotal.io/post/profiling_cpu_on_pcf/)
+* [CloudFoundry: Enabling Java JMX/RMI access for remote containers](https://fabianlee.org/2017/12/09/cloudfoundry-enabling-java-jmx-rmi-access-for-remote-containers/)
+* [CloudFoundry: Java thread and heap dump analysis on remote containers](https://fabianlee.org/2017/12/08/cloudfoundry-java-thread-and-heap-dump-analysis-on-remote-containers/)
+* [How to Remotely Debug Java Applications on Cloud Foundry](https://community.pivotal.io/s/article/How-to-Remotely-Debug-Java-Applications-on-Cloud-Foundry)
 
 #### Property Reference
 * [KIE Server Property Names and Constants](https://github.com/kiegroup/droolsjbpm-integration/blob/5788f5fc0a151dc1b2c005172c1dd3007de12994/kie-server-parent/kie-server-api/src/main/java/org/kie/server/api/KieServerConstants.java)
 * [SpringBoot Common Application Properties Reference](https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/html/common-application-properties.html)
 * [Cloud Foundry Environment Variables Reference](https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html)
+
+#### Misc
+* [Download JVisualVM](https://visualvm.github.io/download.html)

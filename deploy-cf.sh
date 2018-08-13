@@ -17,6 +17,7 @@ cf bind-service cf-kie-server cf-kie-server-db
 cf start cf-kie-server
 
 cf ssh -N -T -L 5000:localhost:5000 cf-kie-server
+cf ssh -N -T -L 8000:localhost:8000 cf-kie-server
 
 cf logs cf-kie-server
 
