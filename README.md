@@ -93,7 +93,7 @@ More:
 * [CloudFoundry: Enabling Java JMX/RMI access for remote containers](https://fabianlee.org/2017/12/09/cloudfoundry-enabling-java-jmx-rmi-access-for-remote-containers/)
 * [CloudFoundry: Java thread and heap dump analysis on remote containers](https://fabianlee.org/2017/12/08/cloudfoundry-java-thread-and-heap-dump-analysis-on-remote-containers/)
 * [Download JVisualVM](https://visualvm.github.io/download.html)
-* Java Home is OSX is `/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/`
+* Java Home in OSX is `/System/Library/Frameworks/JavaVM.framework/Versions/Current/Commands/`
 
 ## Additional Links
 
